@@ -1,0 +1,32 @@
+{
+  "name": "easy-pen",
+  "version": "1.0.0",
+  "description": "屏幕画笔工具 - 教师授课专用",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.easypen.app",
+    "productName": "easy-pen",
+    "asar": true,
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "electronLanguages": ["zh-CN", "en-US"],
+    "win": {
+      "target": "dir",
+      "signAndEditExecutable": false
+    }
+  }
+}

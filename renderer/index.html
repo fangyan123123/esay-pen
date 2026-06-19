@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>easy-pen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="drawing-canvas"></canvas>
+
+  <div id="toolbar" class="toolbar">
+    <div class="toolbar-section tools">
+      <button class="tool-btn active" data-tool="pen" title="画笔">🖊️</button>
+      <button class="tool-btn" data-tool="highlighter" title="荧光笔">🖍️</button>
+      <button class="tool-btn" data-tool="rect" title="矩形">⬜</button>
+      <button class="tool-btn" data-tool="circle" title="圆形">⭕</button>
+      <button class="tool-btn" data-tool="arrow" title="箭头">➡️</button>
+      <button class="tool-btn" data-tool="line" title="直线">─</button>
+      <button class="tool-btn" data-tool="text" title="文字">𝐓</button>
+      <button class="tool-btn" data-tool="eraser" title="橡皮擦">🧹</button>
+    </div>
+
+    <div class="toolbar-divider"></div>
+
+    <div class="toolbar-section colors">
+      <button class="color-btn active" data-color="#FF0000" style="background:#FF0000" title="红色"></button>
+      <button class="color-btn" data-color="#0000FF" style="background:#0000FF" title="蓝色"></button>
+      <button class="color-btn" data-color="#00AA00" style="background:#00AA00" title="绿色"></button>
+    </div>
+
+    <div class="toolbar-divider"></div>
+
+    <div class="toolbar-section sizes">
+      <button class="size-btn" data-size="2" title="细">▪</button>
+      <button class="size-btn active" data-size="5" title="中">■</button>
+      <button class="size-btn" data-size="10" title="粗">⬛</button>
+    </div>
+
+    <div class="toolbar-divider"></div>
+
+    <div class="toolbar-section actions">
+      <button class="action-btn" id="clear-btn" title="清除全部">🗑️</button>
+      <button class="action-btn" id="close-btn" title="关闭画笔">✕</button>
+    </div>
+  </div>
+
+  <input type="text" id="text-input" class="text-input" style="display:none;" />
+
+  <script src="canvas.js"></script>
+  <script src="tools/pen.js"></script>
+  <script src="tools/highlighter.js"></script>
+  <script src="tools/shapes.js"></script>
+  <script src="tools/text.js"></script>
+  <script src="tools/eraser.js"></script>
+  <script src="toolbar.js"></script>
+</body>
+</html>

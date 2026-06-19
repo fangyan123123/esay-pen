@@ -1,0 +1,20 @@
+# 依赖（可用 npm install 重新安装）
+node_modules/
+
+# 构建产物（electron-builder 输出）
+dist/
+
+# 旧打包文件（113MB，超 GitHub 单文件 100MB 限制）
+easy-pen.zip
+
+# 本地工具配置（仅本机）
+.claude/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志
+*.log
+npm-debug.log*
